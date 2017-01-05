@@ -1,6 +1,6 @@
 {
     "name": "mihasicehcek/json_parser",
-    "description": "wrapper over native php json_(decode/encode) functions",
+    "description": "Simple wrapper over json_decode/json_encode php functions. Throws exceptions when decoding/encoding fails",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,9 @@
             "email": "mihasichechek@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=5.2.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "5.5.*"
     },
