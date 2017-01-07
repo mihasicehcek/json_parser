@@ -22,7 +22,7 @@ try{
 }
 ```
 
-Library has two public methods \JsonParser\JsonParser::jsonDecode() for serialization and \JsonParser\JsonParser::jsonEncode() for deserialization. Full description you can see at [json_decode](http://php.net/manual/ru/function.json-decode.php "json_decode") and [json_encode](http://php.net/manual/ru/function.json-encode.php "json_encode").
+Library has two public methods \JsonParser\JsonParser::jsonDecode() for serialization and \JsonParser\JsonParser::jsonEncode() for deserialization. Signature of these method same as [json_decode](http://php.net/manual/ru/function.json-decode.php "json_decode") and [json_encode](http://php.net/manual/ru/function.json-encode.php "json_encode").
 But unlike native function library throws exceptions when decoding/encoding went wrong. There are exceptions for each de/serialization error. Full list of error you can see at [json_last_error](http://php.net/manual/ru/function.json-last-error.php "json_last_error")
 
 ## Exceptions
