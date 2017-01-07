@@ -11,7 +11,19 @@ try{
   print_r("Message: ".$ex->getMessage().", code: ".$ex->getCode()); //Message: Syntax error, code: 4
 }
 
+try{
+  $a = new stdClass();
+  $b = new stdClass();
+  $a->b = $b;
+  $b->a = $a;
+  $result = \JsonParser\JsonParser::jsonEncode($a);
+}catch(\JsonParser\Exception $ex){
+  print_r("Message: ".$ex->getMessage().", code: ".$ex->getCode()); //Message: The object or array passed to json_encode include recursive references and cannot be encoded, code: 7
+}
 ```
+
+Library has two public methods \JsonParser\JsonParser::jsonDecode() for serialization and \JsonParser\JsonParser::jsonEncode() for deserialization. Full description you can see at [json_decode](http://php.net/manual/ru/function.json-decode.php "json_decode") and [json_encode](http://php.net/manual/ru/function.json-encode.php "json_encode").
+But unlike native function library throws exceptions when decoding/encoding went wrong. There are exceptions for each de/serialization error. Full list of error you can see at [json_last_error](http://php.net/manual/ru/function.json-last-error.php "json_last_error")
 
 ## Exceptions
 
