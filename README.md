@@ -1,5 +1,13 @@
 # JsonParser
 
+## Installation
+
+### With Composer
+
+```
+$ composer require mihasicehcek/json_parser
+```
+
 ## Simple Eample
 Simple wrapper over json_decode/json_encode php functions. Throws exceptions when decoding/encoding fails.
 
