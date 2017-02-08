@@ -1,5 +1,9 @@
 # JsonParser
 
+[![Latest Stable Version](https://poser.pugx.org/mihasicehcek/json_parser/version)](https://packagist.org/packages/mihasicehcek/php_json_rpc_2_server)
+[![Total Downloads](https://poser.pugx.org/mihasicehcek/json_parser/downloads)](https://packagist.org/packages/mihasicehcek/php_json_rpc_2_server)
+[![License](https://poser.pugx.org/mihasicehcek/json_parser/license)](https://packagist.org/packages/mihasicehcek/php_json_rpc_2_server)
+
 ## Installation
 
 ### With Composer
