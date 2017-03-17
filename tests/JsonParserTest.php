@@ -57,7 +57,16 @@ class JsonParserTest extends TestCase
         $this->expectException(Utf8Exception::class);
         $this->expectExceptionMessage('Malformed UTF-8 characters, possibly incorrectly encoded');
 
-        JsonHandler::encode("\xB1\x31");
+        JsonParser::jsonEncode("\xB1\x31");
+    }
+    
+    public function testDecodeDepthException()
+    {
+        $this->expectException(DepthException::class);
+        $this->expectExceptionMessage('Maximum stack depth exceeded');
+
+        $sample = '{ "layer1": {"layer2": {"layer3": "leaf"} } }';
+        JsonParser::jsonDecode($sample, true, 2);
     }
 
 }
