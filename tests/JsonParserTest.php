@@ -51,5 +51,13 @@ class JsonParserTest extends TestCase
         $arr = ["a" => INF];
         JsonParser::jsonEncode($arr);
     }
+    
+    public function testEncodeUTF8Exception()
+    {
+        $this->expectException(Utf8Exception::class);
+        $this->expectExceptionMessage('Malformed UTF-8 characters, possibly incorrectly encoded');
+
+        JsonHandler::encode("\xB1\x31");
+    }
 
 }
